@@ -477,6 +477,7 @@ dma_map!(
     (Stream7<DMA1>, 7, pac::I2C2, MemoryToPeripheral),       //I2C2_TX
     (Stream0<DMA2>, 0, pac::ADC1, PeripheralToMemory),       //ADC1
     (Stream0<DMA2>, 0, Adc<pac::ADC1>, PeripheralToMemory),
+    (Stream0<DMA2>, 2, Adc<pac::ADC3>, PeripheralToMemory), //<<=== fix??
     (Stream0<DMA2>, 3, pac::SPI1, PeripheralToMemory), //SPI1_RX
     (Stream0<DMA2>, 3, spi::Rx<pac::SPI1>, PeripheralToMemory), //SPI1_RX
     (Stream1<DMA2>, 5, pac::USART6, PeripheralToMemory), //USART6_RX
