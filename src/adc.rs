@@ -794,10 +794,10 @@ macro_rules! adc {
                 /// Sets the sampling resolution
                 pub fn set_resolution(&mut self, resolution: config::Resolution) {
                     self.max_sample = match resolution {
-                        config::Resolution::Twelve => (1 << 12) - 1,
-                        config::Resolution::Ten => (1 << 10) - 1,
-                        config::Resolution::Eight => (1 << 8) - 1,
-                        config::Resolution::Six => (1 << 6) -1,
+                        config::Resolution::Twelve => (1 << 12),
+                        config::Resolution::Ten => (1 << 10),
+                        config::Resolution::Eight => (1 << 8),
+                        config::Resolution::Six => (1 << 6),
                     };
                     self.config.resolution = resolution;
                     self.adc_reg.cr1.modify(|_, w| w.res().bits(resolution.into()));
