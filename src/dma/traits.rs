@@ -477,7 +477,6 @@ dma_map!(
     (Stream7<DMA1>, 7, pac::I2C2, MemoryToPeripheral),       //I2C2_TX
     (Stream0<DMA2>, 0, pac::ADC1, PeripheralToMemory),       //ADC1
     (Stream0<DMA2>, 0, Adc<pac::ADC1>, PeripheralToMemory),
-    (Stream0<DMA2>, 2, Adc<pac::ADC3>, PeripheralToMemory), //<<=== fix??
     (Stream0<DMA2>, 3, pac::SPI1, PeripheralToMemory), //SPI1_RX
     (Stream0<DMA2>, 3, spi::Rx<pac::SPI1>, PeripheralToMemory), //SPI1_RX
     (Stream1<DMA2>, 5, pac::USART6, PeripheralToMemory), //USART6_RX
@@ -929,6 +928,10 @@ dma_map!(
     (Stream2<DMA2>, 1, pac::ADC2, PeripheralToMemory),  //ADC2
     (Stream3<DMA2>, 1, pac::ADC2, PeripheralToMemory),  //ADC2
     (Stream7<DMA2>, 1, pac::DCMI, PeripheralToMemory),  //DCMI
+    (Stream2<DMA2>, 1, Adc<pac::ADC3>, PeripheralToMemory), //ADC2
+    (Stream3<DMA2>, 1, Adc<pac::ADC3>, PeripheralToMemory), //ADC2
+    (Stream0<DMA2>, 2, Adc<pac::ADC3>, PeripheralToMemory), //ADC3
+    (Stream1<DMA2>, 2, Adc<pac::ADC3>, PeripheralToMemory), //ADC3
 );
 #[cfg(any(
     feature = "stm32f417",
