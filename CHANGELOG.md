@@ -14,7 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Implementation of RTIC Monotonic for TIM2 & TIM5 under `rtic` feature [#380] [#390]
 - `IoPin` for `Output<OpenDrain>> <-> Input<Floating>>` [#374]
 - `IoPin` for `Output<PushPull>> <-> Input<PullUp>> and Input<PullDown>>` [#389]
+- DMA allows read access to peripheral [#396]
+- ADC2+ADC3 usable for DMA Transfer [#396]
 
+[#396]: https://github.com/stm32-rs/stm32f4xx-hal/pull/396
 [#390]: https://github.com/stm32-rs/stm32f4xx-hal/pull/390
 [#382]: https://github.com/stm32-rs/stm32f4xx-hal/pull/382
 [#380]: https://github.com/stm32-rs/stm32f4xx-hal/pull/380
